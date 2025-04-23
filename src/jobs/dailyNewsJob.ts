@@ -28,10 +28,10 @@ const categories = [
 
     newsByCategory[name] = posts;
 
-    // for (const post of posts) {
-    //   const gist = await postToGist(post);
-    //   if (gist) console.log(`✅ ${name}: ${gist}`);
-    // }
+    for (const post of posts) {
+      const gist = await postToGist(post);
+      if (gist) console.log(`✅ ${name}: ${gist}`);
+    }
   }
 
   await postNewsThreads(newsByCategory);
